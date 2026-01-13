@@ -18,7 +18,8 @@ const HomePage = () => {
         <Text
           fontSize={"30"}
           fontWeight={"bold"}
-          bgGradient={"linear(to-r, cyan.400, blue.500)"}
+          bgGradient={"linear(to-r, orange.400, orange.700, orange.400)"}
+          userSelect={"none"}
           bgClip={"text"}
           textAlign={"center"}
         >
@@ -50,7 +51,7 @@ const HomePage = () => {
             <Link to={"/create"}>
               <Text
                 as="span"
-                color="blue.500"
+                color="orange.500"
                 _hover={{ textDecoration: "underline" }}
               >
                 Create a product
