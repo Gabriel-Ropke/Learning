@@ -1,19 +1,5 @@
 import mongoose from "mongoose";
-
-const verifyImageUrl = (str) => {
-  const normalizedStr = str.toLowerCase();
-
-  const urlWithoutQuery = normalizedStr.split("?")[0];
-
-  const startsWithHttp = urlWithoutQuery.startsWith("http");
-  const validExtensions = [".jpg", ".png", ".jpeg", ".webp", ".avif", ".gif"];
-
-  const endsWithValidExtension = validExtensions.some((ext) =>
-    normalizedStr.endsWith(ext)
-  );
-
-  return startsWithHttp && endsWithValidExtension;
-};
+import { verifyImageUrl } from "../utils/verifyImageUrl.js";
 
 const productSchema = new mongoose.Schema(
   {
